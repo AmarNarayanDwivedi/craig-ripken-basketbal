@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer utilities {
   .basketball-texture {
     background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
     background-size: 24px 24px;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .btn-glow {
+    box-shadow: 0 0 20px rgba(255, 106, 0, 0.4);
+  }
+  
+  .btn-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(255, 106, 0, 0.6);
   }
 }
