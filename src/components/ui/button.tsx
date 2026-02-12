@@ -3,13 +3,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-    "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 uppercase tracking-wider min-h-[44px]",
+    "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 uppercase tracking-wider hover:-translate-y-0.5 active:translate-y-0",
     {
         variants: {
             variant: {
-                default: "bg-primary text-white hover:bg-orange-600 shadow-lg shadow-primary/20",
+                default: "bg-primary text-white hover:bg-orange-600 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30",
                 destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-                outline: "border border-white/20 bg-white/5 hover:bg-white/10 hover:text-white backdrop-blur-sm",
+                outline: "border border-white/20 bg-white/5 hover:bg-white/10 hover:text-white backdrop-blur-sm hover:border-white/30",
                 secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
                 ghost: "hover:bg-white/10 hover:text-white",
                 link: "text-primary underline-offset-4 hover:underline",

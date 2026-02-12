@@ -70,6 +70,7 @@ export function AboutSection() {
                         src="/images/about-portrait.webp"
                         alt="Coach Craig Ripken"
                         fill
+                        loading="lazy"
                         className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60"></div>

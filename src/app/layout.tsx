@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Lexend } from "next/font/google";
+import "./globals.css";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
+const lexend = Lexend({
   subsets: ["latin"],
-  variable: "--font-bebas",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  variable: "--font-lexend",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${bebasNeue.variable} ${inter.variable} font-body antialiased bg-background-dark text-white`}>
+      <body className={`${lexend.variable} font-display antialiased bg-background-dark text-white`}>
         {children}
       </body>
     </html>

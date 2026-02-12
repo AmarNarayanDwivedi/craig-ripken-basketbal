@@ -15,8 +15,7 @@ const config: Config = {
                 "background-dark": "#120d0a",
             },
             fontFamily: {
-                heading: ["var(--font-bebas)", "sans-serif"],
-                body: ["var(--font-inter)", "sans-serif"],
+                display: ["var(--font-lexend)", "sans-serif"],
             },
             borderRadius: {
                 lg: "var(--radius)",
