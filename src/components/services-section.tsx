@@ -57,7 +57,7 @@ const services = [
 
 export function ServicesSection() {
     return (
-        <section className="py-24 bg-background-dark relative">
+        <section id="services" className="py-24 bg-zinc-950 relative">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">
@@ -76,35 +76,37 @@ export function ServicesSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="group relative bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
+                            className="group relative bg-gradient-to-b from-zinc-900 to-black border border-white/10 rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-300 hover:-translate-y-2 shadow-2xl"
                         >
-                            {/* Image Header */}
-                            <div className="relative h-48 overflow-hidden">
+                            {/* Image Header - Fixed aspect ratio */}
+                            <div className="relative aspect-[4/3] overflow-hidden bg-zinc-900">
                                 <Image
                                     src={service.image}
                                     alt={service.title}
                                     fill
                                     loading="lazy"
-                                    className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-60 group-hover:opacity-80"
+                                    className="object-cover group-hover:scale-110 transition-transform duration-700 opacity-50"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
-                                <div className="absolute bottom-4 left-6 flex items-center space-x-2">
-                                    <div className="p-2 bg-primary/20 backdrop-blur-sm rounded-lg text-primary">
-                                        <service.icon size={20} />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+                                <div className="absolute top-4 left-4">
+                                    <div className="p-2.5 bg-white/10 backdrop-blur-md rounded-xl text-white border border-white/20">
+                                        <service.icon size={22} strokeWidth={2.5} />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white uppercase italic tracking-wide">
+                                </div>
+                                <div className="absolute bottom-4 left-4 right-4">
+                                    <h3 className="text-2xl font-extrabold text-white uppercase italic tracking-tight">
                                         {service.title}
                                     </h3>
                                 </div>
                             </div>
 
                             {/* Content */}
-                            <div className="p-6">
+                            <div className="p-6 bg-black">
                                 <div className="flex items-baseline mb-4">
-                                    <span className="text-3xl font-extrabold text-white">
+                                    <span className="text-4xl font-extrabold text-white">
                                         {service.price}
                                     </span>
-                                    <span className="text-zinc-500 text-sm font-medium ml-1">
+                                    <span className="text-zinc-500 text-sm font-semibold ml-2">
                                         {service.period}
                                     </span>
                                 </div>
@@ -114,16 +116,20 @@ export function ServicesSection() {
                                 <ul className="space-y-3 mb-8">
                                     {service.features.map((feature, i) => (
                                         <li key={i} className="flex items-start text-sm text-zinc-300">
-                                            <Check size={16} className="text-primary mr-2 mt-0.5 shrink-0" />
-                                            {feature}
+                                            <Check size={16} className="text-primary mr-2.5 mt-0.5 shrink-0" strokeWidth={2.5} />
+                                            <span className="font-medium">{feature}</span>
                                         </li>
                                     ))}
                                 </ul>
-                                <Link href="/contact" className="block">
-                                    <Button className="w-full" variant={service.popular ? "default" : "outline"}>
-                                        Book Now
-                                    </Button>
-                                </Link>
+                                <Button
+                                    className="w-full h-12 text-base font-bold"
+                                    variant={service.popular ? "default" : "outline"}
+                                    asChild
+                                >
+                                    <Link href="#contact">
+                                        BOOK NOW
+                                    </Link>
+                                </Button>
                             </div>
                         </motion.div>
                     ))}

@@ -34,16 +34,16 @@ export function Navbar() {
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                     isScrolled
-                        ? "bg-background-dark/80 backdrop-blur-md border-b border-white/5 py-4"
-                        : "bg-transparent py-6"
+                        ? "bg-background-dark/95 backdrop-blur-xl border-b border-white/10 py-4 shadow-2xl shadow-black/50"
+                        : "bg-gradient-to-b from-black/80 via-black/60 to-transparent backdrop-blur-md py-6 shadow-lg shadow-black/30"
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="relative z-50">
-                        <span className="text-primary font-bold tracking-widest text-xs uppercase block">
+                        <span className="text-primary font-bold tracking-widest text-xs uppercase block drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                             Craig Ripken
                         </span>
-                        <span className="text-xl font-extrabold text-white tracking-tighter uppercase leading-none">
+                        <span className="text-xl font-extrabold text-white tracking-tighter uppercase leading-none drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                             Basketball
                         </span>
                     </Link>
@@ -55,10 +55,10 @@ export function Navbar() {
                                 <Link
                                     href={link.href}
                                     className={cn(
-                                        "text-sm font-semibold uppercase tracking-widest transition-colors duration-200",
+                                        "text-sm font-semibold uppercase tracking-widest transition-colors duration-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]",
                                         pathname === link.href
                                             ? "text-primary"
-                                            : "text-zinc-400 group-hover:text-white"
+                                            : "text-white/90 group-hover:text-white"
                                     )}
                                 >
                                     {link.name}

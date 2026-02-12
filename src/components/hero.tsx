@@ -18,8 +18,9 @@ export function Hero() {
                     priority
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-background-dark/40 via-background-dark/50 to-background-dark"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-background-dark/70 via-background-dark/60 to-background-dark/80"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/40"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
             </div>
 
             {/* Content */}
@@ -29,23 +30,23 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <span className="text-primary font-bold tracking-widest text-sm uppercase mb-4 block">
+                    <span className="text-primary font-bold tracking-widest text-sm uppercase mb-4 block drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                         Elite Basketball Training
                     </span>
-                    <h1 className="text-6xl md:text-8xl font-extrabold text-white tracking-tighter italic uppercase leading-none mb-6">
+                    <h1 className="text-6xl md:text-8xl font-extrabold text-white tracking-tighter italic uppercase leading-none mb-6 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
                         Elevate <br /> Your Game
                     </h1>
-                    <p className="text-zinc-300 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light tracking-wide">
+                    <p className="text-white/95 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-medium tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                         Master your mechanics. Dominate the court. Professional coaching for athletes who demand greatness.
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-2">
                         <Link href="/contact">
-                            <Button size="lg" className="h-14 px-10 text-lg">
+                            <Button size="lg" className="h-14 px-10 text-base font-bold shadow-2xl shadow-primary/40">
                                 Book Your Session
                             </Button>
                         </Link>
                         <Link href="/about">
-                            <Button variant="outline" size="lg" className="h-14 px-10 text-lg border-white/20 text-white hover:bg-white/10">
+                            <Button variant="outline" size="lg" className="h-14 px-10 text-base font-bold border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 shadow-xl shadow-black/50">
                                 Meet Coach Craig
                             </Button>
                         </Link>

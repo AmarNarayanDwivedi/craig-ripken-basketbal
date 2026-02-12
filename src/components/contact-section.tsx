@@ -23,8 +23,8 @@ export function ContactSection() {
         <section id="contact" className="relative py-24 bg-background-dark overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 z-0">
-                <Image src="/images/hero-contact.webp" alt="Basketball Court" fill loading="lazy" className="object-cover opacity-10" />
-                <div className="absolute inset-0 bg-background-dark/90 backdrop-blur-[2px]"></div>
+                <Image src="/images/hero-contact.webp" alt="Basketball Court" fill loading="lazy" className="object-cover opacity-5" />
+                <div className="absolute inset-0 bg-background-dark/95"></div>
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
